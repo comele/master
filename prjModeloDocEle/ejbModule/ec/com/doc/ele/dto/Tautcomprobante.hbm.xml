@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2016 8:40:38 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ec.com.doc.ele.dto.Tautcomprobante" table="tautcomprobante" schema="public">
+        <id name="idautcomp" type="int">
+            <column name="idautcomp" precision="9" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="terroresautorizacionsri" class="ec.com.doc.ele.dto.Terroresautorizacionsri" fetch="select">
+            <column name="iderrorsri" precision="9" scale="0" />
+        </many-to-one>
+        <many-to-one name="tcomprobante" class="ec.com.doc.ele.dto.Tcomprobante" fetch="select">
+            <column name="idcomprobante" precision="9" scale="0" />
+        </many-to-one>
+        <many-to-one name="tclavescontingencia" class="ec.com.doc.ele.dto.Tclavescontingencia" fetch="select">
+            <column name="idclavescontingencia" precision="9" scale="0" />
+        </many-to-one>
+        <many-to-one name="tusuario" class="ec.com.doc.ele.dto.Tusuario" fetch="select">
+            <column name="usuarioregistro" precision="9" scale="0" />
+        </many-to-one>
+        <many-to-one name="tfirmaelectronica" class="ec.com.doc.ele.dto.Tfirmaelectronica" fetch="select">
+            <column name="idfirmaelectronica" precision="9" scale="0" />
+        </many-to-one>
+        <property name="clavedeacceso" type="big_decimal">
+            <column name="clavedeacceso" precision="49" scale="0" />
+        </property>
+        <property name="numautorizacion" type="big_decimal">
+            <column name="numautorizacion" precision="37" scale="0" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" length="4" />
+        </property>
+        <property name="usuariomodificacion" type="string">
+            <column name="usuariomodificacion" length="64" />
+        </property>
+        <property name="fecharegistro" type="date">
+            <column name="fecharegistro" length="4" />
+        </property>
+        <property name="fechamodificacion" type="date">
+            <column name="fechamodificacion" length="4" />
+        </property>
+    </class>
+</hibernate-mapping>

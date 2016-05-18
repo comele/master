@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2016 8:40:38 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ec.com.doc.ele.dto.Tproveedor" table="tproveedor" schema="public">
+        <id name="idproveedor" type="int">
+            <column name="idproveedor" precision="9" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="tusuario" class="ec.com.doc.ele.dto.Tusuario" fetch="select">
+            <column name="usuarioregistro" precision="9" scale="0" />
+        </many-to-one>
+        <property name="numdocproveedor" type="string">
+            <column name="numdocproveedor" length="13" />
+        </property>
+        <property name="estadoproveedor" type="string">
+            <column name="estadoproveedor" length="4" />
+        </property>
+        <property name="usuariomodificacion" type="string">
+            <column name="usuariomodificacion" length="64" />
+        </property>
+        <property name="fecharegistrio" type="date">
+            <column name="fecharegistrio" length="4" />
+        </property>
+        <property name="fechamodificacion" type="date">
+            <column name="fechamodificacion" length="4" />
+        </property>
+        <set name="tfacturaclienteexternos" table="tfacturaclienteexterno" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idproveedor" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tfacturaclienteexterno" />
+        </set>
+        <set name="tdeducibleses" table="tdeducibles" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idproveedor" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tdeducibles" />
+        </set>
+    </class>
+</hibernate-mapping>

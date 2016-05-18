@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2016 8:40:38 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ec.com.doc.ele.dto.Tcomprobante" table="tcomprobante" schema="public">
+        <id name="idcomprobante" type="int">
+            <column name="idcomprobante" precision="9" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="ttipocomprobante" class="ec.com.doc.ele.dto.Ttipocomprobante" fetch="select">
+            <column name="idtipocomprobante" precision="9" scale="0" />
+        </many-to-one>
+        <many-to-one name="tusuario" class="ec.com.doc.ele.dto.Tusuario" fetch="select">
+            <column name="usuarioregistro" precision="9" scale="0" />
+        </many-to-one>
+        <many-to-one name="tcliente" class="ec.com.doc.ele.dto.Tcliente" fetch="select">
+            <column name="idcliente" precision="9" scale="0" />
+        </many-to-one>
+        <property name="ambiente" type="java.lang.Integer">
+            <column name="ambiente" />
+        </property>
+        <property name="tipoemision" type="java.lang.Integer">
+            <column name="tipoemision" />
+        </property>
+        <property name="totalbruto" type="big_decimal">
+            <column name="totalbruto" precision="10" />
+        </property>
+        <property name="descuentos" type="big_decimal">
+            <column name="descuentos" precision="10" />
+        </property>
+        <property name="totalneto" type="big_decimal">
+            <column name="totalneto" precision="10" />
+        </property>
+        <property name="basesinimp" type="big_decimal">
+            <column name="basesinimp" precision="10" />
+        </property>
+        <property name="baseconimp" type="big_decimal">
+            <column name="baseconimp" precision="10" />
+        </property>
+        <property name="iva" type="java.lang.Integer">
+            <column name="iva" />
+        </property>
+        <property name="porivaaplicado" type="java.lang.Integer">
+            <column name="porivaaplicado" />
+        </property>
+        <property name="totalfactura" type="big_decimal">
+            <column name="totalfactura" precision="10" />
+        </property>
+        <property name="numcomprobante" type="java.lang.Integer">
+            <column name="numcomprobante" />
+        </property>
+        <property name="usuariomodificacion" type="string">
+            <column name="usuariomodificacion" length="64" />
+        </property>
+        <property name="fecharegistro" type="date">
+            <column name="fecharegistro" length="4" />
+        </property>
+        <property name="fechamodificacion" type="date">
+            <column name="fechamodificacion" length="4" />
+        </property>
+        <set name="tdetallecomprobantes" table="tdetallecomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcomprobante" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tdetallecomprobante" />
+        </set>
+        <set name="txmlcomprobantes" table="txmlcomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcomprobante" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Txmlcomprobante" />
+        </set>
+        <set name="tautcomprobantes" table="tautcomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcomprobante" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tautcomprobante" />
+        </set>
+    </class>
+</hibernate-mapping>

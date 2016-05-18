@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-name="tautcomprobante" match-schema="public"></table-filter>
+	<table-filter match-name="tcatalogoarticulos"
+		match-schema="public">
+	</table-filter>
+	<table-filter match-name="tclavescontingencia"
+		match-schema="public">
+	</table-filter>
+	<table-filter match-name="tcliente" match-schema="public"></table-filter>
+	<table-filter match-name="tcomprobante" match-schema="public"></table-filter>
+	<table-filter match-name="tdeduciblefactura"
+		match-schema="public">
+	</table-filter>
+	<table-filter match-name="tdeducibles" match-schema="public"></table-filter>
+	<table-filter match-name="tdetallecomprobante"
+		match-schema="public">
+	</table-filter>
+	<table-filter match-name="tdetallefactext" match-schema="public"></table-filter>
+	<table-filter match-name="terroresautorizacionsri"
+		match-schema="public">
+	</table-filter>
+	<table-filter match-name="testablecimiento" match-schema="public"></table-filter>
+	<table-filter match-name="tfacturaclienteexterno"
+		match-schema="public">
+	</table-filter>
+	<table-filter match-name="tfirmaelectronica"
+		match-schema="public">
+	</table-filter>
+	<table-filter match-name="tmenu" match-schema="public"></table-filter>
+	<table-filter match-name="tproveedor" match-schema="public"></table-filter>
+	<table-filter match-name="tpuntoemision" match-schema="public"></table-filter>
+	<table-filter match-name="ttipocomprobante" match-schema="public"></table-filter>
+	<table-filter match-name="ttipodeducible" match-schema="public"></table-filter>
+	<table-filter match-name="ttipodocumento" match-schema="public"></table-filter>
+	<table-filter match-name="tusuario" match-schema="public"></table-filter>
+	<table-filter match-name="tusuariomenu" match-schema="public"></table-filter>
+	<table-filter match-name="txmlcomprobante" match-schema="public"></table-filter>
+</hibernate-reverse-engineering>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2016 8:40:38 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ec.com.doc.ele.dto.Terroresautorizacionsri" table="terroresautorizacionsri" schema="public">
+        <id name="iderrorsri" type="int">
+            <column name="iderrorsri" precision="9" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="codigoerrorsri" type="string">
+            <column name="codigoerrorsri" length="10" />
+        </property>
+        <property name="descripcionerrorsri" type="string">
+            <column name="descripcionerrorsri" length="200" />
+        </property>
+        <property name="posiblesolucionerrorsri" type="string">
+            <column name="posiblesolucionerrorsri" length="400" />
+        </property>
+        <property name="usuarioregistro" type="java.lang.Integer">
+            <column name="usuarioregistro" precision="9" scale="0" />
+        </property>
+        <property name="usuariomodificacion" type="string">
+            <column name="usuariomodificacion" length="64" />
+        </property>
+        <property name="fecharegistro" type="timestamp">
+            <column name="fecharegistro" length="8" />
+        </property>
+        <property name="fechamodificacion" type="timestamp">
+            <column name="fechamodificacion" length="8" />
+        </property>
+        <set name="tautcomprobantes" table="tautcomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="iderrorsri" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tautcomprobante" />
+        </set>
+    </class>
+</hibernate-mapping>

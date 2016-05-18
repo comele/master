@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2016 8:40:38 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ec.com.doc.ele.dto.Tcliente" table="tcliente" schema="public">
+        <id name="idcliente" type="int">
+            <column name="idcliente" precision="9" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="ttipodocumento" class="ec.com.doc.ele.dto.Ttipodocumento" fetch="select">
+            <column name="idtipodocumento" precision="9" scale="0" />
+        </many-to-one>
+        <many-to-one name="tusuario" class="ec.com.doc.ele.dto.Tusuario" fetch="select">
+            <column name="usuarioregistro" precision="9" scale="0" />
+        </many-to-one>
+        <property name="numdocumento" type="java.lang.Long">
+            <column name="numdocumento" precision="13" scale="0" />
+        </property>
+        <property name="primernombre" type="string">
+            <column name="primernombre" length="64" />
+        </property>
+        <property name="segundonombre" type="string">
+            <column name="segundonombre" length="64" />
+        </property>
+        <property name="primerapellido" type="string">
+            <column name="primerapellido" length="64" />
+        </property>
+        <property name="segundoapellido" type="string">
+            <column name="segundoapellido" length="64" />
+        </property>
+        <property name="telefono" type="java.lang.Long">
+            <column name="telefono" precision="10" scale="0" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="128" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="64" />
+        </property>
+        <property name="usuariomodificacion" type="string">
+            <column name="usuariomodificacion" length="64" />
+        </property>
+        <property name="fecharegistro" type="date">
+            <column name="fecharegistro" length="4" />
+        </property>
+        <property name="fechamodificacion" type="date">
+            <column name="fechamodificacion" length="4" />
+        </property>
+        <set name="tfacturaclienteexternos" table="tfacturaclienteexterno" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcliente" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tfacturaclienteexterno" />
+        </set>
+        <set name="tcomprobantes" table="tcomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcliente" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tcomprobante" />
+        </set>
+        <set name="tdeducibleses" table="tdeducibles" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idcliente" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tdeducibles" />
+        </set>
+    </class>
+</hibernate-mapping>
