@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2016 8:40:38 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ec.com.doc.ele.dto.Tcatalogoarticulos" table="tcatalogoarticulos" schema="public">
+        <id name="idarticulo" type="int">
+            <column name="idarticulo" precision="9" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="tusuario" class="ec.com.doc.ele.dto.Tusuario" fetch="select">
+            <column name="usuarioregistro" precision="9" scale="0" />
+        </many-to-one>
+        <property name="codigobarras" type="big_decimal">
+            <column name="codigobarras" precision="64" scale="0" />
+        </property>
+        <property name="descripcionart" type="string">
+            <column name="descripcionart" length="128" />
+        </property>
+        <property name="preciounisiniva" type="big_decimal">
+            <column name="preciounisiniva" precision="10" scale="4" />
+        </property>
+        <property name="aplicaiva" type="string">
+            <column name="aplicaiva" length="2" />
+        </property>
+        <property name="porivaaplicar" type="string">
+            <column name="porivaaplicar" length="2" />
+        </property>
+        <property name="tipodeducible" type="string">
+            <column name="tipodeducible" length="64" />
+        </property>
+        <property name="usuariomodificacion" type="string">
+            <column name="usuariomodificacion" length="64" />
+        </property>
+        <property name="fecharesgistro" type="date">
+            <column name="fecharesgistro" length="4" />
+        </property>
+        <property name="fechamodificacion" type="date">
+            <column name="fechamodificacion" length="4" />
+        </property>
+        <set name="tdetallecomprobantes" table="tdetallecomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idarticulo" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tdetallecomprobante" />
+        </set>
+    </class>
+</hibernate-mapping>

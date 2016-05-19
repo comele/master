@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 11-may-2016 8:40:38 by Hibernate Tools 4.0.0.Final -->
+<hibernate-mapping>
+    <class name="ec.com.doc.ele.dto.Tusuario" table="tusuario" schema="public">
+        <id name="idusuario" type="int">
+            <column name="idusuario" precision="9" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="cuentausuario" type="string">
+            <column name="cuentausuario" length="64" />
+        </property>
+        <property name="nombreusuario" type="string">
+            <column name="nombreusuario" length="128" />
+        </property>
+        <property name="claveusuario" type="string">
+            <column name="claveusuario" length="128" />
+        </property>
+        <property name="estadousuario" type="string">
+            <column name="estadousuario" length="128" />
+        </property>
+        <property name="tipousuario" type="string">
+            <column name="tipousuario" length="64" />
+        </property>
+        <property name="fecharegistro" type="date">
+            <column name="fecharegistro" length="4" />
+        </property>
+        <property name="fechamodificacion" type="date">
+            <column name="fechamodificacion" length="4" />
+        </property>
+        <property name="usuarioregistro" type="string">
+            <column name="usuarioregistro" length="64" />
+        </property>
+        <property name="usuariomodificacion" type="string">
+            <column name="usuariomodificacion" length="64" />
+        </property>
+        <set name="tdetallecomprobantes" table="tdetallecomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tdetallecomprobante" />
+        </set>
+        <set name="tdeducibleses" table="tdeducibles" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tdeducibles" />
+        </set>
+        <set name="tpuntoemisions" table="tpuntoemision" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tpuntoemision" />
+        </set>
+        <set name="ttipodocumentos" table="ttipodocumento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Ttipodocumento" />
+        </set>
+        <set name="tproveedors" table="tproveedor" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tproveedor" />
+        </set>
+        <set name="ttipocomprobantes" table="ttipocomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Ttipocomprobante" />
+        </set>
+        <set name="tmenus" table="tmenu" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tmenu" />
+        </set>
+        <set name="txmlcomprobantes" table="txmlcomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Txmlcomprobante" />
+        </set>
+        <set name="tautcomprobantes" table="tautcomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tautcomprobante" />
+        </set>
+        <set name="tusuariomenus" table="tusuariomenu" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tusuariomenu" />
+        </set>
+        <set name="tcatalogoarticuloses" table="tcatalogoarticulos" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tcatalogoarticulos" />
+        </set>
+        <set name="tcomprobantes" table="tcomprobante" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tcomprobante" />
+        </set>
+        <set name="tdetallefactexts" table="tdetallefactext" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tdetallefactext" />
+        </set>
+        <set name="tfacturaclienteexternos" table="tfacturaclienteexterno" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tfacturaclienteexterno" />
+        </set>
+        <set name="tclientes" table="tcliente" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tcliente" />
+        </set>
+        <set name="tfirmaelectronicas" table="tfirmaelectronica" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tfirmaelectronica" />
+        </set>
+        <set name="ttipodeducibles" table="ttipodeducible" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Ttipodeducible" />
+        </set>
+        <set name="testablecimientos" table="testablecimiento" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Testablecimiento" />
+        </set>
+        <set name="tdeduciblefacturas" table="tdeduciblefactura" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tdeduciblefactura" />
+        </set>
+        <set name="tclavescontingencias" table="tclavescontingencia" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="usuarioregistro" precision="9" scale="0" />
+            </key>
+            <one-to-many class="ec.com.doc.ele.dto.Tclavescontingencia" />
+        </set>
+    </class>
+</hibernate-mapping>
