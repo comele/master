@@ -1,3 +1,7 @@
+--tusuario
+insert into tusuario values (1,'admin','Administrador','admin','ACT','INTERNO','2016-05-31',null,1,null);
+
+--tmenu
 insert into tmenu values ('1',null,'Administración','Administración',null,'SI',1,'NO',null,'ACT',1,null,'2016-01-01 23:50:59',null);
 insert into tmenu values('2','1','Seguridades','Seguridades del sistema',null,'SI',1,'NO','','ACT',1,null,'2016-01-01 23:50:59',null);
 insert into tmenu values('3','2','Administración de usuarios','Administración de usuarios','adminUsuarios','SI',1,'SI','usuariosP','ACT',1,null,'2016-01-01 23:50:59',null);
