@@ -1,0 +1,29 @@
+[
+	{
+	  "stateName": "comele",
+	  "urlPrefix": "/comele",
+	  "type": "load",
+	  "src": "app/comele"
+	},
+	{
+	  "parent": "comele",
+	  "stateName": "comele.login",
+	  "urlPrefix": "/comele",
+	  "type": "load",
+	  "src": "app/login/login"
+	},
+	{
+	  "parent": "comele",
+	  "stateName": "comele.mainMenu",
+	  "urlPrefix": "/mainMenu",
+	  "type": "load",
+	  "src": "app/login/login"
+	},
+	{
+	  "parent": "comele",
+	  "stateName": "comele.admin",
+	  "urlPrefix": "/admin",
+	  "type": "load",
+	  "src": "app/admin/admin"
+	}
+]

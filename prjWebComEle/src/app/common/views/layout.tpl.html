@@ -1,0 +1,48 @@
+<div>
+	<nav class="navbar navbar-default navbar-fixed-top" id="header">
+		<div class="container">
+			<div class="col-md-12" class="text-center">
+				<img style="width: 48px;" ng-src="{{layoutCtrl.appConstant.IMG_ICON_APPLOGO}}"/>
+				<label id="headerTitle">COMELE </label>
+			</div>
+		</div>
+	</nav>
+	<div class="container-fluid" id="all-content">
+		<div class="row" id="all-content-row">
+			<div ng-class="layoutCtrl.model.classSideBar" ng-if="layoutCtrl.model.renderSideBar">
+
+				<div ui-view="sideBar" style="margin-right: 6px;"></div>
+
+				<div id="collapsed-center-section">
+					<div class="imgMiddle">
+						<img ng-class="layoutCtrl.model.classCloseOpenPanel"
+							 ng-src="{{layoutCtrl.appConstant.IMG_ICON_LAYOUT_CLOSE}}"
+							 ng-click="layoutCtrl.closeOpenPanel()"
+							title="Cerrar"/>
+					</div>
+				</div>
+			</div>
+
+			<div ng-class="layoutCtrl.model.classContent">
+
+				<div ui-view="content" ng-class="layoutCtrl.styleClassContent"></div>
+
+				<div id="collapsed-center-section-left" ng-if="layoutCtrl.model.classCloseOpenPanel == 'closed'">
+					<div class="imgMiddle">
+						<img ng-class="layoutCtrl.model.classCloseOpenPanel"
+							 ng-src="{{layoutCtrl.appConstant.IMG_ICON_LAYOUT_OPEN}}"
+							 ng-click="layoutCtrl.closeOpenPanel()"
+							 title="Abrir"/>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<nav class="navbar-default navbar-fixed-bottom" id="footer">
+		<div>
+			<p class="text-center">Copyrigth</p>
+		</div>
+	</nav>
+</div>
