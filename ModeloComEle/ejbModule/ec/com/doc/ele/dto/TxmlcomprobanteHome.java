@@ -8,13 +8,16 @@ import javax.persistence.PersistenceContext;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import ec.com.doc.ele.pojo.BuscadorDTO;
+
 /**
  * Home object for domain model class Txmlcomprobante.
  * @see ec.com.doc.ele.dto.Txmlcomprobante
  * @author Hibernate Tools
  */
+@SuppressWarnings("serial")
 @Stateless
-public class TxmlcomprobanteHome {
+public class TxmlcomprobanteHome extends BuscadorDTO{
 
 	private static final Log log = LogFactory.getLog(TxmlcomprobanteHome.class);
 

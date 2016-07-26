@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tdetallefactext;
  * @author Hibernate Tools
  */
 @Stateless
-public class TdetallefactextHome {
+public class TdetallefactextHome implements TdetallefactextHomeI{
 
 	private static final Log log = LogFactory.getLog(TdetallefactextHome.class);
 

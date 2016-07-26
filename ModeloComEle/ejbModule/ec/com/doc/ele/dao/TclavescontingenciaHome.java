@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tclavescontingencia;
  * @author Hibernate Tools
  */
 @Stateless
-public class TclavescontingenciaHome {
+public class TclavescontingenciaHome implements TclavescontingenciaHomeI{
 
 	private static final Log log = LogFactory.getLog(TclavescontingenciaHome.class);
 

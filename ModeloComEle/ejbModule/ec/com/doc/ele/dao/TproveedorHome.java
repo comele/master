@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tproveedor;
  * @author Hibernate Tools
  */
 @Stateless
-public class TproveedorHome {
+public class TproveedorHome implements TproveedorHomeI {
 
 	private static final Log log = LogFactory.getLog(TproveedorHome.class);
 

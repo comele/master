@@ -1,7 +1,5 @@
 package ec.com.doc.ele.dao;
 
-// Generated 14-dic-2011 22:52:05 by Hibernate Tools 3.4.0.CR1
-
 import java.util.Collection;
 
 import javax.ejb.Remote;

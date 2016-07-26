@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tdeducibles;
  * @author Hibernate Tools
  */
 @Stateless
-public class TdeduciblesHome {
+public class TdeduciblesHome implements TdeduciblesHomeI{
 
 	private static final Log log = LogFactory.getLog(TdeduciblesHome.class);
 

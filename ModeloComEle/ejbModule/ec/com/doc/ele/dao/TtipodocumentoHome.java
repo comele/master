@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Ttipodocumento;
  * @author Hibernate Tools
  */
 @Stateless
-public class TtipodocumentoHome {
+public class TtipodocumentoHome implements TtipodocumentoHomeI{
 
 	private static final Log log = LogFactory.getLog(TtipodocumentoHome.class);
 

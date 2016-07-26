@@ -17,7 +17,7 @@ import ec.com.doc.ele.dto.TusuariomenuId;
  * @author Hibernate Tools
  */
 @Stateless
-public class TusuariomenuHome{
+public class TusuariomenuHome implements TusuariomenuHomeI{
 
 	private static final Log log = LogFactory.getLog(TusuariomenuHome.class);
 

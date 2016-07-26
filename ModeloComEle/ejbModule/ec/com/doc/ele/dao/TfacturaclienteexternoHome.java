@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tfacturaclienteexterno;
  * @author Hibernate Tools
  */
 @Stateless
-public class TfacturaclienteexternoHome {
+public class TfacturaclienteexternoHome implements TfacturaclienteexternoHomeI{
 
 	private static final Log log = LogFactory.getLog(TfacturaclienteexternoHome.class);
 

@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Testablecimiento;
  * @author Hibernate Tools
  */
 @Stateless
-public class TestablecimientoHome {
+public class TestablecimientoHome implements TestablecimientoHomeI{
 
 	private static final Log log = LogFactory.getLog(TestablecimientoHome.class);
 

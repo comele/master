@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tcliente;
  * @author Hibernate Tools
  */
 @Stateless
-public class TclienteHome {
+public class TclienteHome implements TclienteHomeI {
 
 	private static final Log log = LogFactory.getLog(TclienteHome.class);
 

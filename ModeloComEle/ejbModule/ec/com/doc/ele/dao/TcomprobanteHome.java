@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tcomprobante;
  * @author Hibernate Tools
  */
 @Stateless
-public class TcomprobanteHome {
+public class TcomprobanteHome implements TcomprobanteHomeI {
 
 	private static final Log log = LogFactory.getLog(TcomprobanteHome.class);
 

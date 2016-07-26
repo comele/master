@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tautcomprobante;
  * @author Hibernate Tools
  */
 @Stateless
-public class TautcomprobanteHome {
+public class TautcomprobanteHome implements TautcomprobanteHomeI{
 
 	private static final Log log = LogFactory.getLog(TautcomprobanteHome.class);
 

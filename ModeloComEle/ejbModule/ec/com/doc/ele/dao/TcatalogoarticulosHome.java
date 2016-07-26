@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tcatalogoarticulos;
  * @author Hibernate Tools
  */
 @Stateless
-public class TcatalogoarticulosHome {
+public class TcatalogoarticulosHome implements TcatalogoarticulosHomeI{
 
 	private static final Log log = LogFactory.getLog(TcatalogoarticulosHome.class);
 

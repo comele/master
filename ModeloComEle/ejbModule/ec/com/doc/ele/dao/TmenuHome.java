@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tmenu;
  * @author Hibernate Tools
  */
 @Stateless
-public class TmenuHome {
+public class TmenuHome implements TmenuHomeI{
 
 	private static final Log log = LogFactory.getLog(TmenuHome.class);
 

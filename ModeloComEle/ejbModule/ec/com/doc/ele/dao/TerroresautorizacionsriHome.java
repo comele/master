@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Terroresautorizacionsri;
  * @author Hibernate Tools
  */
 @Stateless
-public class TerroresautorizacionsriHome {
+public class TerroresautorizacionsriHome implements TerroresautorizacionsriHomeI{
 
 	private static final Log log = LogFactory.getLog(TerroresautorizacionsriHome.class);
 

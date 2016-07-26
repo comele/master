@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Ttipodeducible;
  * @author Hibernate Tools
  */
 @Stateless
-public class TtipodeducibleHome {
+public class TtipodeducibleHome implements TtipodeducibleHomeI{
 
 	private static final Log log = LogFactory.getLog(TtipodeducibleHome.class);
 

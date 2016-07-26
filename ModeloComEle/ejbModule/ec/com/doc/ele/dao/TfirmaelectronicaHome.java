@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tfirmaelectronica;
  * @author Hibernate Tools
  */
 @Stateless
-public class TfirmaelectronicaHome {
+public class TfirmaelectronicaHome implements TfirmaelectronicaHomeI{
 
 	private static final Log log = LogFactory.getLog(TfirmaelectronicaHome.class);
 

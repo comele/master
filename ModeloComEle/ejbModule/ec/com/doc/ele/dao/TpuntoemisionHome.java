@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tpuntoemision;
  * @author Hibernate Tools
  */
 @Stateless
-public class TpuntoemisionHome {
+public class TpuntoemisionHome implements TpuntoemisionHomeI{
 
 	private static final Log log = LogFactory.getLog(TpuntoemisionHome.class);
 

@@ -16,7 +16,7 @@ import ec.com.doc.ele.dto.Tdeduciblefactura;
  * @author Hibernate Tools
  */
 @Stateless
-public class TdeduciblefacturaHome {
+public class TdeduciblefacturaHome implements TdeduciblefacturaHomeI{
 
 	private static final Log log = LogFactory.getLog(TdeduciblefacturaHome.class);
 
